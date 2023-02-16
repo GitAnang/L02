@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matematika</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body align="center">
+    <img src="342.jfif" alt="" />
+    <!-- Persegi Panjang -->
+    <div>
+      <script>
+        function Luas() {
+          var p = document.getElementById("p").value;
+          var l = document.getElementById("l").value;
+          var t = document.getElementById("t").value;
+          var Luas = p * l * t;
+
+          document.getElementById("Luas").innerHTML = Luas;
+        }
+      </script>
+      <h3>Persegi Panjang</h3>
+      <p>Panjang <input type="text" id="p" /></p>
+      <p>Lebar <input type="text" id="l" /></p>
+      <p>Tinggi <input type="text" id="t" oninput="Luas()" /></p>
+
+      <p>Luas : <span id="Luas" type="text"> </span></p>
+      <p></p>
+    </div>
+    <!-- Persegi -->
+    <div>
+      <h3>Persegi</h3>
+      <p>Sisi <input type="text" id="s" oninput="L()" /></p>
+      <p>Luas : <span id="L" type="text"></span></p>
+      <script>
+        function L() {
+          var s = document.getElementById("s").value;
+          var L = s * s;
+
+          document.getElementById("L").innerHTML = L;
+        }
+      </script>
+    </div>
+
+    <!-- Segitiga -->
+    <div>
+      <script>
+        function Ls() {
+          let ts = document.getElementById("ts").value;
+          let a = document.getElementById("a").value;
+          let Ls = (a * ts) / 2;
+
+          document.getElementById("Ls").innerHTML = Ls;
+        }
+      </script>
+      <h3>Segitiga</h3>
+      <p>Tinggi <input type="text" id="ts" /></p>
+      <p>Alas <input type="text" id="a" oninput="Ls()" /></p>
+
+      <p>Luas : <span id="Ls" type="text"></span></p>
+    </div>
+  </body>
+</html>
